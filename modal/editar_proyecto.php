@@ -19,7 +19,7 @@
         </div>
         </div>
          <div class="form-group">
-        <label for="mod_codigo" class="col-sm-3 control-label">Codigo</label>
+        <label for="mod_codigo" class="col-sm-3 control-label">Codigo del proyecto</label>
         <div class="col-sm-12">
           <input type="text" class="form-control" id="mod_codigo" name="mod_codigo">
         </div>
