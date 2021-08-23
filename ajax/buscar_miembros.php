@@ -29,7 +29,7 @@ session_start();
 		
 	}
 	if($action == 'ajax'){
-		$sql="SELECT * FROM  entregables WHERE codigo_proyecto = '".$id_p."'";
+		$sql="SELECT * FROM  entregables /* WHERE codigo_proyecto = '".$id_p."' */";
 		$query = mysqli_query($con, $sql);
 			?>
 			<div class="card shadow mb-4">
@@ -41,7 +41,8 @@ session_start();
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                    <th>Nombre</th>
+                    <th>Codigo_proyecto</th>
+					<th>Nombre</th>
 					<th>Fecha de entrega</th>
 					
 					 <?php if($_SESSION['prol']=='Inv Principal'){?><th class='text-right'>Acciones</th><?php } ?>
@@ -62,7 +63,8 @@ session_start();
 					?>
 					<tr>
 						
-						<td><?php echo $nombre; ?></td>
+					<td><?php echo $id; ?></td>
+					<td><?php echo $nombre; ?></td>
 						<td ><?php echo $cedula; ?></td>
 
 					<!-- 	<td ><?php echo $email; ?></td>
