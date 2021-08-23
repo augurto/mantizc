@@ -132,6 +132,14 @@
 						<td>
 							<?php if($row['rol']=='Inv Principal'){?>
 						<a href="entregables.php?id_p=<?php echo $codigo; ?>&id_est=<?php echo $id_es; ?>" class='btn btn-success' title='Ver entregables'>Entregables</a>
+
+						<a href="agregar_entregables.php?id_p=<?php echo $codigo;?>&id_est=<?php echo $id_es;?>" class="btn btn-primary btn-icon-split" title='Editar entregables'>
+
+							<span class="icon text-white-50">
+							</span>
+							<span class="text">Editar Entregables</span>
+							</a>
+
 						<?php }else if ($row['rol']=='estudiante'){?>
 							
 						
