@@ -63,7 +63,7 @@ include("modal/cambiar_password.php");
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">entregable</h1>
-               <?php if($_SESSION['prol']=='administrador' || $_SESSION['prol']=='Inv Principal'){?>
+               <?php if($_SESSION['prol']=='Inv Principal'){?>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"  data-toggle="modal" data-target="#NuevoMiembro"><i class="fas fa-users fa-sm text-white-50"></i> Agregar entregable</a>
           <?php }?>
           </div>
