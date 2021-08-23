@@ -29,7 +29,7 @@ session_start();
 		
 	}
 	if($action == 'ajax'){
-		$sql="SELECT * FROM  entregables WHERE codigo_proyecto = '$id_p'";
+		$sql="SELECT * FROM  entregables WHERE codigo_proyecto = $id_p";
 		$query = mysqli_query($con, $sql);
 			?>
 			<div class="card shadow mb-4">
