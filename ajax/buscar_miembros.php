@@ -43,10 +43,7 @@ session_start();
                     <tr>
                     <th>Nombre</th>
 					<th>Fecha de entrega</th>
-					<!-- <th>Email</th>
-					<th>Rol</th>
-					<th>Grupo</th>
-					<th>Estado</th> -->
+					
 					 <?php if($_SESSION['prol']=='Inv Principal'){?><th class='text-right'>Acciones</th><?php } ?>
                     </tr>
                   </thead>
@@ -61,27 +58,32 @@ session_start();
 						$rol=$row['rol2'];
 						$grupo=$row['grupo'];
 						if ($estado=='activo'){$label_class='warning '; $ico='info';}
-						else{$text_estado="inactivo";$label_class='danger'; $ico='exclamation-triangle';}
-					?> */
+						else{$text_estado="inactivo";$label_class='danger'; $ico='exclamation-triangle';} */
+					?>
 					<tr>
 						
 						<td><?php echo $nombre; ?></td>
 						<td ><?php echo $cedula; ?></td>
 
-						/* <td ><?php echo $email; ?></td>
+					<!-- 	<td ><?php echo $email; ?></td>
 						<td ><?php echo $rol; ?></td>
 						<?php $grp=mysqli_query($con,'select * from grupos where id='.$row['grupo'].'');
                     $rw=mysqli_fetch_array($grp);
 
                       $nombre_grupo=$rw["nombre_grupo"];
                       ?>
-                     <td ><?php echo $nombre_grupo; ?></td> */
+                     <td ><?php echo $nombre_grupo; ?></td>
                     
-					  <td><a href="#" class="btn btn-<?php echo $label_class;?> btn-icon-split">
-                    <span class="icon text-white-50">
+					  <td><a href="#" class="btn btn-<?php echo $label_class;?> btn-icon-split"> -->
+
+
+                    <!-- <span class="icon text-white-50">
                       <i class="fas fa-<?php echo $ico; ?>"></i>
-                    </span>
-                    <span class="text"><?php echo $estado; ?></span>
+                    </span> -->
+
+
+             <!--        <span class="text"><?php echo $estado; ?></span> -->
+
                   </a></td>
 					 <?php if($_SESSION['prol']=='Inv Principal'){?><td ><span class="pull-right">
 					<a href="#" class='btn btn-info' title='Editar miembro' onclick="obtener_datos(<?php echo $id;?>);" data-toggle="modal" data-target="#EditMiembros"><i class="fa fa-edit"></i></a>
@@ -90,12 +92,11 @@ session_start();
 				<?php } ?>
 						<input type="hidden" value="<?php echo $nombre;?>" id="nombre<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $cedula;?>" id="cedula<?php echo $id;?>">
-
-					/* <input type="hidden" value="<?php echo $rol;?>" id="rol<?php echo $id;?>">
+					<!-- <input type="hidden" value="<?php echo $rol;?>" id="rol<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $grupo;?>" id="grupo<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $estado;?>" id="estado<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $nombre_grupo;?>" id="grupo<?php echo $id;?>">
-					<input type="hidden" value="<?php echo $email;?>" id="email<?php echo $id;?>"> */
+					<input type="hidden" value="<?php echo $email;?>" id="email<?php echo $id;?>"> -->
 					</tr>
 					<?php
 				}
