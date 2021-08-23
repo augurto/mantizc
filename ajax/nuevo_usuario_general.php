@@ -6,9 +6,9 @@ $pass = $_POST["pass"];
 $sha1 = sha1($password);
 
 $servername = "localhost";
-$database = "u415020159_mantizb";
-$username = "u415020159_mantizb";
-$password = "Mantizb*#17";
+$database = "u415020159_mantizc";
+$username = "u415020159_mantizc";
+$password = "Mantizc*#17";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Check connection

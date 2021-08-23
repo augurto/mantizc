@@ -1,9 +1,9 @@
 <?php
 ////////////////// CONEXION A LA BASE DE DATOS //////////////////
 $host = 'localhost';
-$basededatos = 'u415020159_mantizb';
-$usuario = 'u415020159_mantizb';
-$contraseña = 'Mantizb*#17';
+$basededatos = 'u415020159_mantizc';
+$usuario = 'u415020159_mantizc';
+$contraseña = 'Mantizc*#17';
 
 $conexion = new mysqli($host, $usuario,$contraseña, $basededatos);
 if ($conexion -> connect_errno) {
