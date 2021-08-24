@@ -29,6 +29,7 @@ session_start();
 		
 	}
 	if($action == 'ajax'){
+		$id_p=$_GET['id_p'];
 		$sql="SELECT * FROM  entregables WHERE codigo_proyecto='".$id_p."'";
 		$query = mysqli_query($con, $sql);
 			?>
