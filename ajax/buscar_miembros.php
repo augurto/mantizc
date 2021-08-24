@@ -29,7 +29,7 @@ session_start();
 		
 	}
 	if($action == 'ajax'){
-		$sql="SELECT * FROM  entregables WHERE codigo_proyecto = '".$id_p."'";
+		$sql="SELECT * FROM  entregables WHERE codigo_proyecto='".$id_p."'";
 		$query = mysqli_query($con, $sql);
 			?>
 			<div class="card shadow mb-4">
@@ -92,8 +92,8 @@ session_start();
 					<a href="#" class='btn btn-info' title='Eliminar miembro' onclick="eliminar(<?php echo $id;?>);" data-toggle="modal" data-target="#myModal2"><i class="fa fa-trash"></i></a> 
 					</span></td>
 				<?php } ?>
-						<input type="hidden" value="<?php echo $nombre;?>" id="nombre<?php echo $id;?>">
-					<input type="hidden" value="<?php echo $cedula;?>" id="cedula<?php echo $id;?>">
+						<input type="text" value="<?php echo $nombre;?>" id="nombre<?php echo $id;?>">
+					<input type="text" value="<?php echo $cedula;?>" id="cedula<?php echo $id;?>">
 					<!-- <input type="hidden" value="<?php echo $rol;?>" id="rol<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $grupo;?>" id="grupo<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $estado;?>" id="estado<?php echo $id;?>">
