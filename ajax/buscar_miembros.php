@@ -42,7 +42,7 @@ session_start();
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                    <th>Codigo_proyectosss</th>
+                    <th>Codigo_proyectos</th>
 					<th>Nombre</th>
 					<th>Fecha de entrega</th>
 					
@@ -95,7 +95,7 @@ session_start();
 				<?php } ?>
 						<input type="text" value="<?php echo $nombre;?>" id="nombre<?php echo $id;?>">
 					<input type="text" value="<?php echo $cedula;?>" id="cedula<?php echo $id;?>">
-					<input type="text" value="<?php echo $idd;?>">
+					<input type="text" value="<?php echo $codigo;?>">
 					<input type="text" value="<?php echo $id;?>">
 					<input type="text" value="<?php echo $id_e;?>">
 					<!-- <input type="hidden" value="<?php echo $rol;?>" id="rol<?php echo $id;?>">
