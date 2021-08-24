@@ -42,10 +42,8 @@ session_start();
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                    <th>Codigo_proyectos</th>
-					<th><?php 
-echo $_GET['id_p'] . $_GET['id_est']
-?></th>
+                    <th>Codigo_proyecto</th>
+					<th>Nombre</th>
 					<th>Fecha de entrega</th>
 					
 					 <?php if($_SESSION['prol']=='Inv Principal'){?><th class='text-right'>Acciones</th><?php } ?>
@@ -97,9 +95,9 @@ echo $_GET['id_p'] . $_GET['id_est']
 				<?php } ?>
 						<input type="text" value="<?php echo $nombre;?>" id="nombre<?php echo $id;?>">
 					<input type="text" value="<?php echo $cedula;?>" id="cedula<?php echo $id;?>">
-					<input type="text" value="<?php echo $codigo;?>">
+					<input type="text" value="<?php echo $cod;?>">
 					<input type="text" value="<?php echo $id;?>">
-					<input type="text" value="<?php echo $id_e;?>">
+					<input type="text" value="<?php echo $_GET['id_p']?>">
 					<!-- <input type="hidden" value="<?php echo $rol;?>" id="rol<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $grupo;?>" id="grupo<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $estado;?>" id="estado<?php echo $id;?>">
