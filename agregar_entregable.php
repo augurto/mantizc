@@ -81,6 +81,7 @@ include("modal/cambiar_password.php");
            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
+                    <th>ID_proyecto</th>
                     <th>Codigo_proyecto</th>
 					<th>Nombre</th>
 					<th>Fecha de entrega</th>
@@ -91,7 +92,8 @@ include("modal/cambiar_password.php");
                   <tbody>
 				<?php
 				while ($row=mysqli_fetch_array($query)){
-						$id=$row['codigo_proyecto'];
+						$id=$row['id'];
+                        $id=$row['codigo_proyecto'];
 						$nombre=$row['nombre'];
 						$cedula=$row['fecha_entrega'];
 						/* $estado=$row['estado'];
