@@ -92,8 +92,8 @@ include("modal/cambiar_password.php");
                   <tbody>
 				<?php
 				while ($row=mysqli_fetch_array($query)){
-						$iddd=$row['id'];
-                        $id=$row['codigo_proyecto'];
+						$id=$row['id'];
+                        $codigo_proyecto=$row['codigo_proyecto'];
 						$nombre=$row['nombre'];
 						$cedula=$row['fecha_entrega'];
 						/* $estado=$row['estado'];
@@ -105,8 +105,8 @@ include("modal/cambiar_password.php");
 					?>
 					<tr>
 						
-					<td><?php echo $iddd; ?></td>
-                    <td><?php echo $id; ?></td>
+					<td><?php echo $id; ?></td>
+                    <td><?php echo $codigo_proyecto; ?></td>
 					<td><?php echo $nombre; ?></td>
 						<td ><?php echo $cedula; ?></td>
 
@@ -140,11 +140,11 @@ include("modal/cambiar_password.php");
 					<input type="text" value="<?php echo $cod;?>">
 					<input type="text" value="<?php echo $id;?>">
 					<input type="text" value="<?php echo $_GET['id_p']?>">
-					<!-- <input type="hidden" value="<?php echo $rol;?>" id="rol<?php echo $id;?>">
-					<input type="hidden" value="<?php echo $grupo;?>" id="grupo<?php echo $id;?>">
-					<input type="hidden" value="<?php echo $estado;?>" id="estado<?php echo $id;?>">
+					<input type="hidden" value="<?php echo $ $_GET['id_p'];?>" id="rol<?php echo $id;?>">
+					<input type="hidden" value="<?php echo $ $_GET['id_p'];?>" id="grupo<?php echo $id;?>">
+					<input type="hidden" value="<?php echo $id;?>" id="estado<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $nombre_grupo;?>" id="grupo<?php echo $id;?>">
-					<input type="hidden" value="<?php echo $email;?>" id="email<?php echo $id;?>"> -->
+					<input type="hidden" value="<?php echo $id;?>" id="email<?php echo $id;?>">
 					</tr>
 					<?php
 				}
