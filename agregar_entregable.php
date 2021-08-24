@@ -71,6 +71,7 @@ include("modal/cambiar_password.php");
            <div class="outer_div"></div> -->
            <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">PRueba detabla</h6>
+              <input type="text" value="<?php echo $_GET['id_p']?>">
             </div>
            <div class="table-responsive">
            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
