@@ -92,7 +92,7 @@ include("modal/cambiar_password.php");
                   <tbody>
 				<?php
 				while ($row=mysqli_fetch_array($query)){
-						$id=$row['id'];
+						$iddd=$row['id'];
                         $id=$row['codigo_proyecto'];
 						$nombre=$row['nombre'];
 						$cedula=$row['fecha_entrega'];
@@ -105,7 +105,8 @@ include("modal/cambiar_password.php");
 					?>
 					<tr>
 						
-					<td><?php echo $id; ?></td>
+					<td><?php echo $iddd; ?></td>
+                    <td><?php echo $id; ?></td>
 					<td><?php echo $nombre; ?></td>
 						<td ><?php echo $cedula; ?></td>
 
