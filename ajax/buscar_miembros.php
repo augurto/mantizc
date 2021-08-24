@@ -30,7 +30,7 @@ session_start();
 	}
 	if($action == 'ajax'){
 		$id_e=$_GET['id_p'];
-		$sql="SELECT * FROM  entregables WHERE codigo_proyecto='11'";
+		$sql="SELECT * FROM  entregables /* WHERE codigo_proyecto='11' */";
 		$query = mysqli_query($con, $sql);
 			?>
 			<div class="card shadow mb-4">
@@ -42,7 +42,7 @@ session_start();
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                    <th>Codigo_proyectos</th>
+                    <th>Codigo_proyecto</th>
 					<th>Nombre</th>
 					<th>Fecha de entrega</th>
 					
