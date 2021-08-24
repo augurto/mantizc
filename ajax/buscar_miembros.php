@@ -29,7 +29,7 @@ session_start();
 		
 	}
 	if($action == 'ajax'){
-		$id_e=$_POST['id_p'];
+		$id_e=$_GET['id_p'];
 		$sql="SELECT * FROM  entregables WHERE codigo_proyecto='11'";
 		$query = mysqli_query($con, $sql);
 			?>
@@ -95,7 +95,8 @@ session_start();
 				<?php } ?>
 						<input type="text" value="<?php echo $nombre;?>" id="nombre<?php echo $id;?>">
 					<input type="text" value="<?php echo $cedula;?>" id="cedula<?php echo $id;?>">
-					<input type="text" value="<?php echo $id_p;?>">
+					<input type="text" value="<?php echo $id_e;?>">
+					<input type="text" value="<?php echo $id;?>">
 					<!-- <input type="hidden" value="<?php echo $rol;?>" id="rol<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $grupo;?>" id="grupo<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $estado;?>" id="estado<?php echo $id;?>">
