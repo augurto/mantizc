@@ -68,9 +68,9 @@ include("modal/cambiar_password.php");
           <?php }?>
           </div>
 
-           <!-- <div class="outer_div"></div> -->
+           <div class="outer_div"></div>
 
-                
+
     
 
         </div>
