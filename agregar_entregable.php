@@ -74,7 +74,9 @@ include("modal/cambiar_password.php");
               <input type="text" value="<?php echo $_GET['id_p']?>">
             </div>
            <div class="table-responsive">
-               <?php $sql="SELECT * FROM  entregables /* WHERE codigo_proyecto='11' */";
+               <?php 
+               $ccod= $_GET['id_p'];
+               $sql="SELECT * FROM  entregables WHERE codigo_proyecto='$ccod'";
 		$query = mysqli_query($con, $sql); ?>
            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
