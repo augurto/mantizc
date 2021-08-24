@@ -30,7 +30,7 @@ session_start();
 	}
 	if($action == 'ajax'){
 		$id_e=$_GET["id_p"];
-		$sql="SELECT * FROM  entregables WHERE codigo_proyecto='".$idd."'";
+		$sql="SELECT * FROM  entregables /* WHERE codigo_proyecto='11' */";
 		$query = mysqli_query($con, $sql);
 			?>
 			<div class="card shadow mb-4">
@@ -42,8 +42,10 @@ session_start();
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                    <th>Codigo_proyectooos</th>
-					<th>Nombre</th>
+                    <th>Codigo_proyectos</th>
+					<th><?php 
+echo $_GET['id_p'] . $_GET['id_est']
+?></th>
 					<th>Fecha de entrega</th>
 					
 					 <?php if($_SESSION['prol']=='Inv Principal'){?><th class='text-right'>Acciones</th><?php } ?>
