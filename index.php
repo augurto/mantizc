@@ -126,7 +126,7 @@ include("modal/cambiar_password.php");
         <?php } ?>
 
            <div id="resultados"></div><!-- Carga los datos ajax -->
-           <?php if($_SESSION['prol']=="administrador"){?>
+           <?php if($_SESSION['prol']=="administrador" || $_SESSION['prol']=="Inv Principal"){?>
         <div class='outer_div'></div><!-- Carga los datos ajax -->
       <?php }?>
       <?php if($_SESSION['prol']=="Inv Principal"){ ?>
