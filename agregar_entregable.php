@@ -140,8 +140,8 @@ include("modal/cambiar_password.php");
 					<input type="text" value="<?php echo $cod;?>">
 					<input type="text" value="<?php echo $id;?>">
 					<input type="text" value="<?php echo $_GET['id_p']?>">
-					<input type="hidden" value="<?php echo $ $_GET['id_p'];?>" id="rol<?php echo $id;?>">
-					<input type="hidden" value="<?php echo $ $_GET['id_p'];?>" id="grupo<?php echo $id;?>">
+					<input type="hidden" value="<?php echo $_GET['id_p'];?>" id="rol<?php echo $id;?>">
+					<input type="hidden" value="<?php echo $_GET['id_p'];?>" id="grupo<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $id;?>" id="estado<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $nombre_grupo;?>" id="grupo<?php echo $id;?>">
 					<input type="hidden" value="<?php echo $id;?>" id="email<?php echo $id;?>">

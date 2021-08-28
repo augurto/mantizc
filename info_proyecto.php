@@ -211,9 +211,9 @@ require_once ("./config/db.php");//Contiene las variables de configuracion para 
 
               <!-- Dropdown Card Example -->
               <div class="card shadow mb-4">
-                 <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample1">
+                 <!-- <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample1">
                   <h6 class="m-0 font-weight-bold text-primary">Cronograma</h6>
-                </a>
+                </a> -->
                 <div class="card-body collapse show" id="collapseCardExample1">
                  <div class="col-md-8" style="font-size: 17px;"><b>Fecha de inicio</b></div>
                <div class="col-md-8"><?php echo strftime("%A, %d de %B del %Y", strtotime($fi));?></div>
@@ -237,6 +237,12 @@ require_once ("./config/db.php");//Contiene las variables de configuracion para 
                   </div>
                 </div>
               </div>
+
+              <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample1">
+                  <h6 class="m-0 font-weight-bold text-primary">Cronograma</h6>
+                </a>
+
+
             <?php } ?>
 
             </div>
