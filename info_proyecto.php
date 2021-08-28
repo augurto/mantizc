@@ -95,7 +95,82 @@ require_once ("./config/db.php");//Contiene las variables de configuracion para 
 
           <div class="row">
 
-            <!-- Earnings (Monthly) Card Example -->
+         
+
+          <div class="row">
+            <input type="hidden" value="<?php echo $_GET['cod'];?>" id="cod">
+            <div class="col-lg-6">
+              <input type="hidden" name="cx" id="cx" value="<?php echo $_GET['cod'];?>">
+              <!-- Default Card Example -->
+              <div class="card mb-4">
+                 <a href="#collapseCardExample3" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample3">
+                  <h6 class="m-0 font-weight-bold text-primary">Descripcion</h6>
+                </a>
+                <div class="collapse show card-body" id="collapseCardExample3">
+                  <?php
+         $cd=$_GET['cod'];
+        $descripcion=mysqli_query($con,"SELECT descripcion FROM proyecto where codigo='".$cd."'");
+        $rwt=mysqli_fetch_array($descripcion);?>
+<p><?php echo $rwt["descripcion"];?></p>
+                </div>
+              </div>
+
+              <!-- Basic Card Example -->
+              <?php if($_SESSION['prol']=="administrador" || $_SESSION['prol']=="Inv Principal" || $_SESSION['prol']=="Coinvestigador"){?>
+              <div class="card shadow mb-4">
+               
+                 <a href="#collapseCardExample2" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample2">
+                  <h6 class="m-0 font-weight-bold text-primary">Miembros</h6>
+
+                </a>
+                <div class="collapse show card-body" id="collapseCardExample2">
+                  
+                <div class="result" id="result"></div>
+                <div class="outer_divww" id="outer_divww"></div>
+                </div>
+              </div>
+            <?php } ?>
+
+            </div>
+
+            <div class="col-lg-6">
+
+              <!-- Dropdown Card Example -->
+              <div class="card shadow mb-4">
+                 <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample1">
+                  <h6 class="m-0 font-weight-bold text-primary">Cronograma</h6>
+                </a>
+                <div class="card-body collapse show" id="collapseCardExample1">
+                 <div class="col-md-8" style="font-size: 17px;"><b>Fecha de inicio</b></div>
+               <div class="col-md-8"><?php echo strftime("%A, %d de %B del %Y", strtotime($fi));?></div>
+               <hr>
+                  <div class="col-md-8" style="font-size: 17px;"><b>Fecha de finalizacion</b></div>
+                  <div class="col-md-8"><?php echo strftime("%A, %d de %B del %Y", strtotime($ff));?></div>
+                </div>
+              </div>
+                <?php if($_SESSION['prol']=="administrador" || $_SESSION['prol']=="Inv Principal" || $_SESSION['prol']=="Coinvestigador"){?>
+              <!-- Collapsable Card Example -->
+              <div class="card shadow mb-4">
+                <!-- Card Header - Accordion -->
+                <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                  <h6 class="m-0 font-weight-bold text-primary">Colaborador</h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse show" id="collapseCardExample">
+                  <div class="card-body">
+                   <div class="result1" id="result1"></div>
+                 <div class="outer_divyy" id="outer_divyy"></div>
+                  </div>
+                </div>
+              </div>
+            <?php } ?>
+
+            </div>
+          </div>
+                  <!-- moviendo toda la vaina  -->
+
+
+                     <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
@@ -168,86 +243,10 @@ require_once ("./config/db.php");//Contiene las variables de configuracion para 
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <input type="hidden" value="<?php echo $_GET['cod'];?>" id="cod">
-            <div class="col-lg-6">
-              <input type="hidden" name="cx" id="cx" value="<?php echo $_GET['cod'];?>">
-              <!-- Default Card Example -->
-              <div class="card mb-4">
-                 <a href="#collapseCardExample3" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample3">
-                  <h6 class="m-0 font-weight-bold text-primary">Descripcion</h6>
-                </a>
-                <div class="collapse show card-body" id="collapseCardExample3">
-                  <?php
-         $cd=$_GET['cod'];
-        $descripcion=mysqli_query($con,"SELECT descripcion FROM proyecto where codigo='".$cd."'");
-        $rwt=mysqli_fetch_array($descripcion);?>
-<p><?php echo $rwt["descripcion"];?></p>
-                </div>
+              </div>
               </div>
 
-              <!-- Basic Card Example -->
-              <?php if($_SESSION['prol']=="administrador" || $_SESSION['prol']=="Inv Principal" || $_SESSION['prol']=="Coinvestigador"){?>
-              <div class="card shadow mb-4">
-               
-                 <a href="#collapseCardExample2" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample2">
-                  <h6 class="m-0 font-weight-bold text-primary">Miembros</h6>
-
-                </a>
-                <div class="collapse show card-body" id="collapseCardExample2">
-                  
-                <div class="result" id="result"></div>
-                <div class="outer_divww" id="outer_divww"></div>
-                </div>
-              </div>
-            <?php } ?>
-
-            </div>
-
-            <div class="col-lg-6">
-
-              <!-- Dropdown Card Example -->
-              <div class="card shadow mb-4">
-                 <!-- <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample1">
-                  <h6 class="m-0 font-weight-bold text-primary">Cronograma</h6>
-                </a> -->
-                <div class="card-body collapse show" id="collapseCardExample1">
-                 <div class="col-md-8" style="font-size: 17px;"><b>Fecha de inicio</b></div>
-               <div class="col-md-8"><?php echo strftime("%A, %d de %B del %Y", strtotime($fi));?></div>
-               <hr>
-                  <div class="col-md-8" style="font-size: 17px;"><b>Fecha de finalizacion</b></div>
-                  <div class="col-md-8"><?php echo strftime("%A, %d de %B del %Y", strtotime($ff));?></div>
-                </div>
-              </div>
-                <?php if($_SESSION['prol']=="administrador" || $_SESSION['prol']=="Inv Principal" || $_SESSION['prol']=="Coinvestigador"){?>
-              <!-- Collapsable Card Example -->
-              <div class="card shadow mb-4">
-                <!-- Card Header - Accordion -->
-                <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
-                  <h6 class="m-0 font-weight-bold text-primary">Colaborador</h6>
-                </a>
-                <!-- Card Content - Collapse -->
-                <div class="collapse show" id="collapseCardExample">
-                  <div class="card-body">
-                   <div class="result1" id="result1"></div>
-                 <div class="outer_divyy" id="outer_divyy"></div>
-                  </div>
-                </div>
-              </div>
-
-              <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample1">
-                  <h6 class="m-0 font-weight-bold text-primary">Cronograma</h6>
-                </a>
-
-
-            <?php } ?>
-
-            </div>
-          </div>
-
+<!--               aca termina  -->
         </div>
         <!-- /.container-fluid -->
 
